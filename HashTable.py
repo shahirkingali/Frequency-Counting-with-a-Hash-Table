@@ -17,9 +17,9 @@ class HashTable:
 
     for i in range(size):
       llist = LinkedList()
-      array.append(LinkedList)
+      arr.append(LinkedList)
 
-  return array
+    return arr
 
 
 
@@ -33,7 +33,7 @@ class HashTable:
     distance = ord(first_letter) - ord('a')
     index = distance % self.size
     
-  return index
+    return index
 
 
   # 3️⃣ TODO: Complete the insert method.
@@ -47,8 +47,10 @@ class HashTable:
     new_insert = self.arr[key_hash].find(key)
     
     if new_insert != -1:
+       new_insert = self.arr[key_hash].append(new_insert)
+       self.arr[key_hash].replace(new_insert)
+    else:
        self.arr[key_hash].append(item)
-
 
 
 
@@ -65,7 +67,9 @@ class HashTable:
   # erase: 2
 
   def print_key_values(self):
-    pass
+    for LinkedList in self.arr:
+      LinkedList.print_nodes()
 
-
+  
+  print("Finished")
 
